@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="keyword" content="html,css,java,js">
+    <title>Sedat Koc | Programming Lessons</title>
+
+    <meta 
+        name="description" 
+        content="Sedat Koc | Programming Lessons"
+    />
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+    <!--font google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+   
+   <!--font awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <!-- mobile and tablet-->
+    <link rel="stylesheet" media="(max-width:500px)" href="css/mobile.css">
+    
+</head>
+<body>
+
+    <header class="bg-dark-blue">
+
+        <div class="container">
+            <nav id="navbar">
+                <h1 class="heading-small">
+                    <a href="index.html">Home</a>|
+                    <span class="active-page">Training and Workshops</span>|
+                    <a href="online_training.html">Online Courses</a> 
+                </h1>
+                
+            </nav>
+
+        </div>
+
+    </header>
+   
+    <div style="text-align:center">
+        <h2>Image Gallery from Training and Workshops</h2>
+        <p>Click on the images below:</p>
+      </div>
+      
+      <!-- The four columns -->
+      <div class="row">
+        <div class="column2">
+          <img src="gallery/img1.jpg" alt="Meeting 1" width="100%" onclick="myFunction(this);">
+        </div>
+        <div class="column2">
+          <img src="gallery/img22.jpg" alt="Conference" width="100%"  onclick="myFunction(this);">
+        </div>
+        <div class="column2">
+          <img src="gallery/img33.jpg" alt="Training" width="100%"  onclick="myFunction(this);">
+        </div>
+        <div class="column2">
+          <img src="gallery/img4.jpg" alt="Tutions" width="100%"  onclick="myFunction(this);">
+        </div>
+        <div class="column2">
+            <img src="gallery/img5.jpg" alt="Conversation" width="100%"  onclick="myFunction(this);">
+          </div>
+          <div class="column2">
+            <img src="gallery/img6.jpg" alt="Meeting 1" width="100%" onclick="myFunction(this);">
+          </div>
+          <div class="column2">
+            <img src="gallery/img7.jpg" alt="Meeting - Get together" width="100%"  onclick="myFunction(this);">
+          </div>
+          <div class="column2">
+            <img src="gallery/img8.jpg" alt="Training" width="100%"  onclick="myFunction(this);">
+          </div>
+          <div class="column2">
+            <img src="gallery/img9.jpg" alt="Tutions" width="100%"  onclick="myFunction(this);">
+          </div>
+          <div class="column2">
+              <img src="gallery/img10.jpg" alt="Conversation" width="100%"  onclick="myFunction(this);">
+            </div>
+      </div>
+      
+      <div class="container2">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      
+      <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+      </script>
+</body>
+</html>
